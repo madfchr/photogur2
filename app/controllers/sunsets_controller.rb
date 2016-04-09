@@ -20,9 +20,22 @@ class SunsetsController < ApplicationController
     end
   end
 
+  def edit
+    @sunset = Sunset.find(params[:id])
+  end
+
+  def update
+    @sunset = Sunset.find(params[:id])
+
+    if @sunset.update_attributes(sunset_params)
+      redirect_to "/sunsets/#{@sunset.id}"
+    else
+      render :edit
+    end
+  end
+
   private
   def sunset_params
     params.require(:sunset).permit(:title, :city, :url)
   end
-  
 end

@@ -1,5 +1,9 @@
-<h1>Add a sunset</h1>
-<%= link_to "Back to Sunsets", sunsets_url %>
+<h1>Edit Sunset</h1>
+
+<p>
+  <%= link_to "Back", @sunset %>
+</p>
+
 <%= form_for @sunset do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -14,6 +18,6 @@
     <%= f.text_field :url %>
   </p>
   <p>
-    <%= f.submit "Save" %>
+    <%= f.submit %>
   </p>
 <% end %>

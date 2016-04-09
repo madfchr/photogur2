@@ -1,4 +1,4 @@
-<%= link_to "Back to Sunsets", sunsets_url %>
+<%= link_to "Back to Sunsets", sunsets_url %> | <%= link_to "Edit", edit_sunset_path(@sunset) %>
 
 <p><%= @sunset.title %>, <%= @sunset.city %></p>
 <% image_tag @sunset.url %>

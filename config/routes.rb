@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get 'sunsets/new' => 'sunsets#new'
 
   get 'sunsets/:id' => 'sunsets#show', as: 'sunset'
+
+  get 'sunsets/:id/edit' => 'sunsets#edit', as: 'edit_sunset'
+  patch 'sunsets/:id' => 'sunsets#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
