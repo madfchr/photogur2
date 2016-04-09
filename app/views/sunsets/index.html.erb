@@ -1,6 +1,11 @@
 <h1>Sunsets</h1>
+<%= link_to "New Sunset", "/sunsets/new" %>
+<!--
+I don't want to add <%= @sunsets.length %>, inside the <h1> because I think it
+ looks ugly on my webpage. But I know that technically it should be there...ha
+ -->
 
 <% @sunsets.each do |sunset| %>
   <p><%= sunset.title %>, <%= sunset.city %></p>
-  <img src="<%= sunset.url %>">
+  <%= link_to image_tag(sunset.url), "sunsets/#{sunset.id}" %>
 <% end %>

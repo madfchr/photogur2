@@ -1,2 +1,4 @@
+<%= link_to "Back to Sunsets", sunsets_url %>
+
 <p><%= @sunset.title %>, <%= @sunset.city %></p>
-<img src="<%= @sunset.url %>">
+<% image_tag @sunset.url %>
