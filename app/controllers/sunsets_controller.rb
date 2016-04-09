@@ -8,10 +8,21 @@ class SunsetsController < ApplicationController
   end
 
   def new
+    @sunset = Sunset.new
   end
 
   def create
-    render :text => "Saving a sunset. URL : #{params[:url]}, Title: #{params[:title]}, City: #{params{:city}}"
+    @sunset = Sunset.new(sunset_params)
+    if @sunset.save
+      redirect_to sunsets_url
+    else
+    render :new
+    end
   end
 
+  private
+  def sunset_params
+    params.require(:sunset).permit(:title, :city, :url)
+  end
+  
 end
