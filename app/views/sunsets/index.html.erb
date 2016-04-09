@@ -2,5 +2,5 @@
 
 <% @sunsets.each do |sunset| %>
   <p><%= sunset.title %>, <%= sunset.city %></p>
-  <img "src= <%= sunset.url %>">
+  <img src="<%= sunset.url %>">
 <% end %>
