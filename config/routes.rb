@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'sunsets#index'
   get 'sunsets' => 'sunsets#index'
 
   post 'sunsets' => 'sunsets#create'
