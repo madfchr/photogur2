@@ -1,4 +1,4 @@
-<%= link_to "Back to Sunsets", sunsets_url %> | <%= link_to "Edit", edit_sunset_path(@sunset) %> | <%= link_to "Delete", delete_sunset_path(@sunset), method: :delete, data: {confirm: "Are you sure you want to delete this sunset?"} %>
+<%= link_to "Back to Sunsets", sunsets_url %> | <%= link_to "Edit", edit_sunset_path(@sunset) %> | <%= link_to "Delete", @sunset, method: :delete, data: {confirm: "Are you sure you want to delete this sunset?"} %>
 
 <p><%= @sunset.title %>, <%= @sunset.city %></p>
 <% image_tag @sunset.url %>

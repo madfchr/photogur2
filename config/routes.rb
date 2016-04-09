@@ -1,18 +1,8 @@
 Rails.application.routes.draw do
   root 'sunsets#index'
-  get 'sunsets' => 'sunsets#index'
 
-  post 'sunsets' => 'sunsets#create'
-  get 'sunsets/new' => 'sunsets#new'
+  resources :sunsets
 
-  get 'sunsets/:id' => 'sunsets#show', as: 'sunset'
-
-  get 'sunsets/:id/edit' => 'sunsets#edit', as: 'edit_sunset'
-  patch 'sunsets/:id' => 'sunsets#update'
-
-  delete 'sunsets/:id' => 'sunset#destroy', as: 'delete_sunset'
-
-  root 'pictures#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
