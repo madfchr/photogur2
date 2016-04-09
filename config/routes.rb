@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'sunsets' => 'sunsets#index'
 
+  post 'sunsets' => 'sunsets#create'
+  get 'sunsets/new' => 'sunsets#new'
+
   get 'sunsets/:id' => 'sunsets#show', as: 'sunset'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
