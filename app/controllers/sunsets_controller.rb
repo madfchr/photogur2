@@ -34,6 +34,12 @@ class SunsetsController < ApplicationController
     end
   end
 
+  def destroy
+    @sunset = Sunset.find(params[:id])
+    @sunset.destroy
+    redirect_to sunsets_url
+  end
+
   private
   def sunset_params
     params.require(:sunset).permit(:title, :city, :url)
